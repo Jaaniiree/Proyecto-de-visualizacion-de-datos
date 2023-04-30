@@ -1,0 +1,528 @@
+<div id="app">
+
+  <h1>Actividad: PROYECTO DE VISUALIZACIÓN DE DATOS </h1>
+  <br>
+  <h3>Complicaciones en pacientes mayores de 18 años que acuden a la urgencia con niveles alterados de glucosa</h3>
+  <br>
+<span class="negrita">Nombre: </span> Janire Gallejones Eskubi
+  <br>
+ <span class="negrita">Asignatura: </span> Visualización de datos
+  <br>
+<span class="negrita">Fecha: </span> 03/05/2023 
+  <br>
+  <br>
+  <span class="negrita">URL:</span>
+  <a href="https://js-5o77t1.stackblitz.io" target="_blank">
+  https://js-5o77t1.stackblitz.io
+  </a>
+  <br>
+  <span class="negrita">GitHub:</span>
+  <a href="https://github.com/Jaaniiree/08MBID---Visualizaci-n-de-Datos" target="_blank">
+  https://github.com/Jaaniiree/08MBID---Visualizaci-n-de-Datos
+  </a>
+
+ 
+  <h2> Introducción </h2>
+  La visualización de datos es una técnica que se utiliza para representar información de manera gráfica y fácil de entender. Esta técnica permite a los usuarios identificar patrones que puede ser difícil de detectar en bases de datos de gran tamaño, es decir, permite la compresión, la interpretación y la comunicación de información.
+  <br>
+  <br>
+  El objetivo de esta actividad es utilizar las técnicas y los conocimientos adquiridos en la asignatura de visualización de datos con el fin de transmitir una información de forma clara y precisa y que los gráficos sirvan de ayuda a los usuarios para extraer conclusiones útiles a cerca de la base de datos que vamos a utilizar. 
+  <br>
+  <br>
+  Para ello vamos a trabajar  con diferentes herramientas y vamos a utilizar diferentes tipos de gráficos en función de lo de que deseemos mostrar. Realizaremos una identificación y una justificación de los tipos de visualizaciones y herramientas utilizadas. 
+  <br>
+  <br>
+  Este proceso es de gran importancia para conseguir un resultado valido de nuestro objetivo de análisis.
+  <br>
+  <br>
+  Para llevar a cabo esta actividad haremos uso de la base de datos de la asignatura de minería de datos y de estadística avanzada, cuyo objetivo era identificar factores de riesgo para la predicción de complicaciones en pacientes mayores de 18 años que acuden a la urgencia con niveles alterados de glucosa y el impacto de la glucemia.
+  <br>
+  <br>
+  Nuestra base de datos está formada por todos los pacientes mayores de 18 años que acuden a la urgencia de un hospital público de la Red Sanitaria Vasca con niveles alterados de glucosa durante el siguiente periodo, desde 01/01/2016 hasta 31/12/2016. A los pacientes se les realizará un seguimiento durante un año para establecer la situación de supervivencia de cada paciente. Pasado ese tiempo se realizó un estudio para determinar las personas que fallecieron en los años posteriores al estudio.
+  <br>
+  <br>
+  La base de datos inicialmente estaba formada por 272 variables y 25298 registros. Estas variables son tanto cualitativas como cuantitativas discretas o continuas y también tenemos variables de tipo fecha.
+  <br>
+  <br>
+  Una vez realizada la limpieza de datos en la asignatura Minería de datos, la base de datos ha quedado compuesta por 66 variables y 22425 registros.
+  <br>
+
+<h2> Metodología </h2> 
+  La metodología de un proyecto de visualización de datos en función del objetivo y la audiencia a la que vaya dirigido, pero existen varios pasos comunes que debemos de realizar en todo proyecto.
+  <br>
+  <br>
+
+  <ol>
+  <li>	Definir el objetivo. 
+  <br>
+  <br>
+  <span class="negrita">1.1. ¿Cuál es el objetivo?</span> 	
+  <br>
+  <br>
+  El objetivo de este trabajo es transmitir de manera clara y comprensible los datos del estudio para dar a conocer las características de los pacientes que forman la población de este proyecto. 
+  <br>
+  <br>
+  Estos pacientes acudieron a la urgencia de los hospitales de la Red Sanitaria Vasca con niveles de glucosa alterados durante el año 2016. Para el análisis tendremos en cuenta su situación basal en el momento que acuden a la urgencia, el nivel gravedad en el que acuden, si ocurren o no complicaciones y si finalmente los pacientes fallecen o no. 
+  <br>
+  <br>
+  También examinaremos el número de muerte sucedidas durante el año de estudio y en los años posteriores.
+  <br>
+  <br>
+  <span class="negrita">1.2.	¿A quién va dirigido? </span> 	
+  <br>
+  <br>
+  El trabajo va dirigido a todos los habitantes de la comunidad autónoma vasca para que puedan entender la finalidad de este proyecto y algunas de las conclusiones obtenidas.
+  <br>
+  <br>
+  Para la comprensión del trabajo no hace falta tener conocimientos previos relacionados con la materia. Ya que se trata de un trabajo divulgativo y que sea entendible por los ciudadanos.
+  <br>
+  <br>
+  <span class="negrita">1.3. ¿Que espera la audiencia? </span>
+  <br>
+  <br>
+  La compresión del objetivo de manera visual, sin adentrarnos en aspectos clínicos. Conocer el número de afectados, características y conclusiones del proyecto. Posibles mejoras a realizar para transmitir datos más precisos y poder sacar mayores conclusiones.</li>
+  <br>
+  <li>Identificar los datos necesarios: base de datos utilizado en las asignaturas anteriores.</li>
+  <br>
+  <li>Preparar los datos. La base de datos debe de estar limpia y preparada para su utilización, esto es un proceso que se realiza previamente. En nuestro caso la limpieza ya esta realizada, ya que la realizamos en la asignatura de minería de datos.</li>
+  <br>
+  <li>	Seleccionar herramientas de visualización. En nuestro caso seleccionaremos un mínimo de dos herramientas (PowerBi, GoogleSheet, Python, Jupyter Notebook, R, DataWrapper, …) y por cada herramienta realizaremos como mínimo de dos tipos de gráficas diferentes.</li>
+  <br>
+  <li>Diseño y desarrollo de visualización y resultados.</li>
+  <br>
+  <li>	Conclusiones.</li>
+  </ol>
+
+  <h2> Diseño, desarrollo y resultados de visualización </h2> 
+  Para comenzar con el trabajo vamos a realizar un análisis de nuestra población según el sexo y la edad. Para ello haremos uso de la pirámide de población usando la herramienta de visualización de GoogleSheet. 
+  <br>
+  <br>
+  La pirámide de población es un gráfico de barras dispuestas horizontalmente cuya longitud es proporcional a la cantidad de personas que representa la edad y sexo de la población.
+  <br>
+  <br>  
+  Nuestra población esta formada por 22.425 pacientes y todos los pacientes son mayores de 18 años. Para generar un gráfico que sea más visual y fácil de comprender hemos agrupado las edades en 9 intervalos diferentes.
+  <br>
+  <br>
+  Tener más de 50 años es un factor de riesgo para la diabetes. Las personas de esta edad y mayores deben tomar medidas activas para prevenir la afección, incluyendo el ejercicio regular, de ligero a moderado y una dieta controlada. Es por ello que el 68.16% de nuestros pacientes que acudieron a la urgencia de un hospital público de la Red Sanitaria Vasca con niveles alterados de glucosa son mayores de 50 años. No hay una diferencia significativa en la prevalencia de la diabetes entre hombres y mujeres, es por ello que el número de pacientes hombres y mujeres es similar, 11.145 y 11.280 respectivamente. Si que hay algunas diferencias en los factores de riesgo que pueden aumentar la probabilidad de desarrollar la enfermedad entre hombres y mujeres.
+  <br>
+  <br>
+
+  <iframe width="800" height="380" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTwfbO8jMMHFs2Rre46evSWVy08ujwCY_pGH2BN4srAMfo3Jk5Cndxm4W7HXZAmY7JOTLkbozIkhcwH/pubchart?oid=2121570557&format=interactive"></iframe>
+  
+  <br>
+  <br>
+  Para comprender un poco mejor el estado basal de nuestros pacientes vamos a analizar el tipo de fármaco que consumían. 
+  <br>
+  <br>
+Familias de fármacos :
+
+<ul>
+  <li>Familia1 : Antihipertensivos </li>
+  <li>Familia2: Vasodilatadores </li>
+  <li>Familia3: Antiagregantes </li>
+  <li>Familia4: Anticoagulantes </li>
+  <li> Familia5: Hipolipemiantes </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>TIPO</th>
+      <th>FRECUENCIA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Familia1</td>
+      <td>11851</td>
+    <tr>
+      <td>Familia2</td>
+      <td>589</td>
+    <tr>
+      <td>Familia3</td>
+      <td>1671</td>
+    <tr>
+      <td>Familia4</td>
+      <td>1542</td>
+    <tr>
+      <td>Familia5</td>
+      <td>8081</td>
+    <tr>
+      <td>Corticoides</td>
+      <td>3156</td>
+    <tr>
+      <td>Hipoglucemiantes orales</td>
+      <td>3307</td>
+    <tr>
+      <td>Hipoglucemiantes inyectables</td>
+      <td>1541</td>
+    <tr>
+      <td>Ningún fármaco</td>
+      <td>5969</td>
+    <tr>
+  </tbody>
+</table>
+<br>
+<br>
+  Solo un 26.62% de nuestra población no tomaba ningún medicamento antes del ingreso en urgencias. A continuación se muestran los resultados anteriores en un diagrama de barras realizado con la herramienta R y haciendo uso de la función pie.
+<br>
+<br>
+<img src="https://dl.dropboxusercontent.com/s/pxb5yj7pxnod7tm/barra_medicamentos.png?dl=0"/>
+<br>
+<br>
+En el siguiente gráfico se puede ver más detalladamente por edades y por sexo el número de pacientes que consumen o que no consumen medicamentos. Claramente se puede observar que independientemente del sexo, el mayor número de pacientes que no consumen medicamentos son menores de 60 años y los que los consumen mayores de 60 años.
+<br>
+<br>
+<img src="https://dl.dropboxusercontent.com/s/5cemr446ksykogx/medicamentos-edad-sexo.jpg?dl=0"/>
+<br>
+<br>
+  Vamos a examinar cual es el rango de edad que no consumen ningún medicamento. Para ello, hemos utilizado un diagrama de barras apiladas realizado con la herramienta Jupyter Notebook. El valor 0 representado con color azul indica que el paciente no consume ningún medicamento y el numero 1 que sí.
+<br>
+<br>
+  En el eje Y aparece la cantidad de pacientes que consumen o que no consumen medicamentos. En el eje Y aparece los diferentes rangos de edades de nuestra población.
+<br>
+<br>
+<img src="https://dl.dropboxusercontent.com/s/sqdkehqmcrw2mza/medicamentos.jpg?dl=0"/>
+
+<br>
+<br>
+  Como era de suponer contra más mayores sean nuestros pacientes, mayor es el número de individuos que consumen algún tipo de fármaco.
+<br>
+<br>
+  Una vez analizado el sexo y la edad de nuestros pacientes y conociendo los  medicamentos que consumían antes del ingreso procedemos a analizar el estado de gravedad de la urgencia y la categoría que el hospital les asigna a cada uno de ellos.
+<br>
+<br>
+  Todos nuestros pacientes acudieron a la urgencia con los niveles de glucosa alterados y, en función del estado en el que llegaron se les asigno un nivel de gravedad. El nivel de gravedad más bajo es MUY LEVE y el más alto es MUY GRAVE. En función de ese ingreso en urgencias y tras haberle suministrado un tratamiento y/o haberle realizado varias pruebas el hospital categoriza a cada uno de los pacientes según su estado glucémico.
+<br>
+<br>
+  En los hospitales de la Red Sanitaria Vasca existen 8 etiquetas/categorías diferentes que son las siguientes:
+<br>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>TIPO</th>
+      <th>HOSPITALIZACIÓN</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hipoglucémico</td>
+      <td>No hospitalizado</td>
+      <td>Hospitalizado</td>
+    </tr>
+    <tr>
+      <td>Normoglucémico</td>
+      <td>No hospitalizado</td>
+      <td>Hospitalizado</td>
+    </tr>
+    <td>Hiperglucémico</td>
+    <td>No hospitalizado</td>
+    <td>Hospitalizado</td>
+    </tr>
+     <td>Hiperglucémico grave</td>
+     <td>No hospitalizado</td>
+     <td>Hospitalizado</td>
+   </tr>
+
+  </tbody>
+</table>
+<br>
+<br>
+A continuación, en el gráfico de columnas apiladas creado con la herramienta GoogleSheet podemos visualizar el número de pacientes de cada uno de los diferentes estados.
+<br>
+<br>
+
+  <iframe width="900" height="550" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTwfbO8jMMHFs2Rre46evSWVy08ujwCY_pGH2BN4srAMfo3Jk5Cndxm4W7HXZAmY7JOTLkbozIkhcwH/pubchart?oid=1734965760&format=interactive"></iframe>
+
+<br>
+<br>
+  En relación con los niveles de gravedad, se puede suponer que el nivel de gravedad del paciente esta fuertemente relacionado con las comorbilidades previas que pueda tener dicho paciente. Es decir, una persona que acude a la urgencia en un estado grave debido a una alteración de sus niveles de glucosa, su estado de gravedad puedes estar influido por su situación basal. 
+  <br>
+  <br>
+  Las enfermedades que pueda tener un paciente suelen alterar los parámetros de las analíticas y entre ellos la glucosa, pero no siempre el paciente más enfermo acude con un estado de mayor gravedad.
+  <br>
+  <br>
+  A continuación utilizaremos la herramienta de RStudio y la función boxplot que es parte de la librería base de R y no necesita ser instalada ni cargada para crear una caja diagrama para analizar la relación que puede haber entre el estado de gravedad del paciente y el número de Charlson previas. 
+  <br>
+  <br>
+  El coeficiente Charlson es la suma de todas las comorbilidades que padece nuestro paciente, siendo el máximo de este 17, lo que significa que nuestro paciente padece todas las enfermedades. El coeficiente mínimo es 0, por lo tanto, nuestro paciente no padece ninguna. 
+  <br>
+  <br>
+  Por ejemplo, supongamos que un paciente tiene Charlson_1 y Charlson_7, es   decir, ha sufrido un infarto de miocardio y una enfermedad reumática, por lo tanto, su coeficiente de Charlson será igual a 2. En conclusión, se suma 1 punto por cada comorbilidad de la tabla.
+<br>
+<br>
+  En la siguiente tabla quedan detallas las comorbilidades de Charlson. 
+  <br>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th>CHARLSON</th>
+        <th>COMORBILIDAD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Charlson_1</td>
+        <td>Infarto de miocardio</td>
+      </tr>
+      <tr>
+        <td>Charlson_2</td>
+        <td>Insuficiencia cardíaca congestiva</td>
+      </tr>
+        <td>Charlson_3</td>
+        <td>Enfermedad vascular periférica</td>
+      </tr>
+       <td>Charlson_4</td>
+        <td>Enfermedad cerebrovascular</td>
+    </tr>
+        <td>Charlson_5</td>
+        <td>Demencia</td>
+    </tr>
+        <td>Charlson_6</td>
+        <td>Enfermedad pulmonar crónica</td>
+    </tr>
+      <td>Charlson_7</td>
+       <td>Enfermedad reumática/tejido conectivo</td>
+    </tr>
+       <td>Charlson_8</td>
+        <td>Úlcera péptica</td>
+    </tr>
+    <td>Charlson_9</td>
+    <td>Enfermedad hepática leve</td>
+  <tr>
+    <td>Charlson_10</td>
+    <td>Diabetes sin daño orgánico/td>
+  </tr>
+    <td>Charlson_11</td>
+    <td>Diabetes con daño orgánico</td>
+  </tr>
+   <td>Charlson_12</td>
+    <td>Hemiplejia/parálisis</td>
+</tr>
+    <td>Charlson_13</td>
+    <td>Enfermedad crónica renal</td>
+</tr>
+    <td>Charlson_14</td>
+    <td>Cualquier tumor</td>
+</tr>
+  <td>Charlson_15</td>
+   <td>Enfermedad hepática moderada-severa </td>
+</tr>
+   <td>Charlson_16</td>
+    <td>Tumor sólido metastásico</td>
+</tr>
+<td>Charlson_17</td>
+ <td>Vih/sida</td>
+</tr>
+    </tbody>
+  </table>
+  <br>
+  <br>
+  El diagrama de caja se interpreta de la siguiente manera: La caja en el diagrama de caja representa el rango intercuartílico (IQR=Q3-Q1) que es la distancia entre el primer y tercer cuartil del conjunto de datos. El IQR abarca el 50% central de los datos y es una medida de la dispersión de los datos. La línea en el interior de la caja (color negro)  representa la mediana del conjunto de datos. La mediana es el valor del medio de todos los datos ordenados de menor a mayor. Es decir, la mediana divide todo el conjunto de datos ordenados en dos partes iguales.
+  <br>
+  <br>
+  Los bigotes en el diagrama de caja representan la extensión de los datos fuera del IQR. Los puntos que se encuentran fuera de los bigotes se consideran valores atípicos.
+  <br>
+  <br>
+  <img src="https://dl.dropboxusercontent.com/s/wa038ahpq9oxd2m/charlson.png?dl=0"/>
+  <br>
+  <br>
+  En la gráfica anterior podemos observar que la mediana (línea negra de dentro de la caja) de los estados leve y muy leve es 0, lo que significa que la mayoría de nuestros pacientes que acuden en este estado tiene un coeficiente de Charlson igual a 0. Mientras que los pacientes que acuden en un estado moderado tienen de mediana un coeficiente de 1 y los que acuden en estado grave o muy grave tienen un coeficiente de 1 y 3, respectivamente. 
+  <br>
+  <br>
+  Todos los pacientes que acuden en un estado muy grave tienen al menos una Charlson, la mediana de este estado es 3, lo que indica que es el valor medio de todos los datos ordenados de menor a mayor.
+  <br>
+  <br>
+  Los pacientes que acuden en un estado grave o moderado sus cuartiles son los siguientes, Q1=0 y Q3=3. Esto indica que la mayoría de los datos se encuentran dentro del rango de 0 a 3, y que los datos están relativamente concentrados en este rango. Además, el hecho de que Q1 sea igual a 0 indica que al menos el 25% de los datos son iguales a cero, mientras que el hecho de que Q3 sea igual a 3 indica que al menos el 25% de los datos son iguales a 3 o mayores que 3.
+  <br>
+  <br>
+  Finalmente, los pacientes que acuden en un estado leve o muy leve, su mediana se encuentra en la parte inferior de la caja lo que quiere decir que la mayoría de los datos son bajos, es decir, que tienen 0 comorbilidades de Charlson.
+  <br>
+  <br>
+  Como se puede ver ningún paciente tiene coeficiente superior a 5, ya que es practicamente imposible parecer lasr 17 comorbilidades de Charlson. Es de destacar que los pacientes que tiene un coeficiente más elevado, acuden en un estado grave o muy grave. Aunque también hay algunos de ellos que acuden en un estado leve (lo indican la parte superior de los bigotes del gráfico azul). Por lo tanto, podemos generalizar que la gravedad del estado de nuestros pacientes viene totalmente relacionado con su comorbilidades previas.
+  <br>
+  <br>
+  Como he comentado anteriormente el objetivo de la base de datos de este proyecto era identificar factores de riesgo para la predicción de complicaciones en pacientes mayores de 18 años que acuden a la urgencia con niveles alterados de glucosa y el impacto de la glucemia. Nuestros pacientes pueden sufrir alguna complicación y dicho problema puede producirles el fallecimiento.
+  <br>
+  <br>
+  A continuación hemos utilizado un gráfico de la línea diseñado con la herramienta Jupyter Notebook para diseñar un gráfico donde podemos observar las muertes que registraron durante el año 2016 y las muertes que se produjeron después, en los años siguientes.
+  <br>
+  <br>
+  Como he mencionado en la introducción  a los pacientes se les realizará un seguimiento durante un año para establecer la situación de supervivencia de cada paciente, desde 01/01/2016 hasta 31/12/2016, es por eso que fijamos una mayor relevancia a los fallecimientos producidos en ese año. Pasados unos años, en el 2020, se revisó el estado de los pacientes para analizar quienes de los participantes habían fallecido en los años siguientes, es de ahí, de donde obtenemos la gráfica de línea azul.
+  <br>
+  <br>
+  Posteriormente adjuntaremos una gráfica donde saldrá detallada las muertes que se produjeron en los diferentes años.
+  <br>
+  <br>
+  <img src="https://dl.dropboxusercontent.com/s/7n27syrbn7kqibf/muertes_2016.jpg?dl=0"/>
+  <br>
+  <br>
+  A continuación se puede ver con mayor exactitud los fallecimientos sucedidos en cada mes durante el año de estudio (2016) y los fallecimientos de cada mes en los años posteriores, es decir, una vez finalizado el proyecto.
+  <br>
+  <br>
+  <img src="https://dl.dropboxusercontent.com/s/tkitzmi5bo747wa/muertes_a%C3%B1os.jpg?dl=0"/>
+  <br>
+  <br>
+  El mayor número de fallecimiento se produjo en enero de 2017, justamente después de concluirse el proyecto. En el resto de meses de los años posteriores el número de muertos fue menor que en los meses de 2016. El mes en el que menos fallecimientos hubo fue en noviembre del 2019.
+  <br>
+  <br>
+  En relación con las gráficas anteriores vamos a centrarnos en el año 2016. Vamos a analizar según el sexo si las complicaciones que sufrieron nuestros pacientes pudieron derivar en fallecimiento o no. Es decir, si todas las personas que murieron, lo hicieron tras haber sufrido alguna complicación o no.
+  <br>
+  <br>
+  Haciendo uso de la herramienta Jupyter Notebook hemos conseguido la siguiente tabla de frecuencias. Solo el 3.16% de nuestros pacientes sufre complicaciones y acaba falleciendo durante el año de estudio. Un 10.91% sufre complicaciones pero no fallece y un 6.71% de nuestra población fallece sin sufrir ninguna complicación, este fallecimiento puede deberse a la edad del paciente y/o a la comorbilidades previas que tuviese.
+  <br>
+  <br>
+  El 79.22% restante no fallece ni sufre ninguna complicación durante el año de seguimiento.
+  <br>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th>SEXO</th>
+        <th>COMPLICACIONES</th>
+        <th>MUERTE</th>
+        <th>FRECUENCIA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Hombre (1)</td>
+        <td>No (0)</td>
+        <td>No (0)</td>
+        <td>8579</td>
+      </tr>
+      <tr>
+        <td>Mujer (2)</td>
+        <td>No (0)</td>
+        <td>No (0)</td>
+        <td>9185</td>
+      </tr>
+        <td>Hombre (1)</td>
+        <td>Si (1)</td>
+        <td>No (0)</td>
+        <td>1393</td>
+      </tr>
+       <td>Mujer (2)</td>
+        <td>Si (1)</td>
+        <td>No (0)</td>
+       <td>1054</td>
+    </tr>
+        <td>Hombre (1)</td>
+        <td>No (0)</td>
+        <td>Si (1)</td>
+        <td>777</td>
+    </tr>
+        <td>Mujer (2)</td>
+        <td>No (0)</td>
+        <td>Si (1)</td>
+        <td>728</td>
+    </tr>
+      <td>Hombre (1)</td>
+       <td>Si (1)</td>
+      <td>Si (1)</td>
+      <td>396</td>
+    </tr>
+       <td>Mujer (2)</td>
+        <td>Si (1)</td>
+        <td>Si (1)</td>
+        <td>313</td>
+    </tr>
+    </tbody>
+  </table>
+  
+  <br>
+  <br>
+  A continuación haciendo uso de la misma herramienta hemos visualizado los datos anteriores en un gráfico de barras apiladas.
+  <br>
+  <br>
+  En el gráfico el color rosa indica mujer y el color azul indica hombre.
+  <br>
+  <br>
+  -	Las barras de la primera posición indican el número de pacientes según el sexo que no sufrieron complicaciones ni fallecieron durante el año de estudio.
+  <br>
+  <br>
+  -	Las barras de la segunda posición indican el número de pacientes según el sexo que no sufrieron complicaciones pero si fallecieron durante el año de estudio.
+  <br>
+  <br>
+  -	Las barras de la tercera posición indican el número de pacientes según el sexo que si sufrieron complicaciones pero no fallecieron durante el año de estudio.
+  <br>
+  <br>
+  -	Las barras de la última posición indican el número de pacientes según el sexo que sufrieron complicaciones y fallecieron durante el año de estudio.
+  <br>
+  <br>
+  <img src="https://dl.dropboxusercontent.com/s/agnnizev73cewtp/complicaciones.jpg?dl=0"/>
+  <br>
+  <br>
+  A continuación se puede ver más detalladamente el número de pacientes que sufren o no complicaciones y si finalmente esas complicaciones derivan en fallecimineto o no según la edad.
+  <br>
+  <br>
+  <img src="https://dl.dropboxusercontent.com/s/grxjuk3jn7ww56x/edad-sexo-muerte-complicaciones.jpg?dl=0"/>
+  <br>
+  <br>
+  La mayoria de las personas fallecidas tras haber sufrido o no alguna complicación son mayores de 60 años. 
+
+  <h2> Conclusiones </h2> 
+
+  Nuestro estudio comenzó con un total de 22425 pacientes durante nuestro año de estudio, el número de pacientes en cuanto sexo están relativamente equiparados. En cuanto a edad, más del 50% de nuestra población se encuentra entre los 30 y 70 años.
+  <br>
+  <br>
+  En relación con la medicación, la mayoría de nuestros pacientes tomaban algún medicamento, solo aproximadamente ¼ parte no consumía ningún fármaco. Como era de esperar, a mayor edad mayor es la probabilidad de tomar alguna medicación dado que con la edad se acentúan las probabilidades de poder padecer alguna enfermedad.
+  Además independientemente del sexo, el mayor número de pacientes que no consumen medicamentos son menores de 60 años y los que los consumen mayores de 60 años.
+  <br>
+  <br>
+  El estado de gravedad esta relacionado con la situación basal del paciente, como hemos observado que los pacientes que tienen un coeficiente de Charlson más elevado son los que en peor estado acuden. Mientras que pacientes que esta en un estado de menor gravedad, su coeficiente es menor.
+  <br>
+  <br>
+  En relación con el estado de gravedad, como hemos podido observar dicho estado si se ve influenciado por la glucocategoría que le asigna el hospital, ya que muchos de los pacientes que acuden en estado grave o muy grave se quedan hospitalizados. También tenemos que mencionar, que algunos que acuden en estado leve acaban hospitalizando, esto puede deberse a complicaciones que puedan sufrir en la urgencia.
+  <br>
+  <br>
+  Analizando los fallecimientos, 2214 personas murieron en el 2016, de las cuales 709 (396 hombres y 313 mujeres) murieron tras haber tenido alguna complicación o debido a una complicación.  
+  <br>
+  <br>
+  El mayor número de fallecimiento se produjo en enero de 2017. En el resto de meses de los años posteriores al 2016 el número de muertes disminuyo favorablemente en comparación con ese año. El mes en el que menos fallecimientos hubo fue en noviembre del 2019.
+  <br>
+  <br>
+  Posibles mejoras a realizar para transmitir datos más precisos y poder sacar mayores conclusiones:
+
+  <ul>
+    <li>Una buena opción para conocer mejor la situación basal de los pacientes sería saber el motivo por el que consumen la medicación, de esta forma podríamos comprender mejor su estado de salud, sus enfermedades previas y anticiparnos a las posibles complicaciones que pueda tener.</li>
+    <li>Para estudios próximos sería interesante saber la causa del fallecimiento de los pacientes y el tipo de complicaciones sufridas. De esta forma se podría analizar y poder sacar conclusiones para saber si existe algún tipo de relación entre el ingreso de urgencias, sus complicaciones y su muerte. </li>
+    <li>Sería interesante contar con la ayuda de un experto, en este caso un/a médico/a o enfermero/a para analizar los valores de las analíticas y buscar algún tipo de relación entre diferentes parámetros o incluso con factores como la edad y el sexo.</li>
+  </ul>
+
+  <br>
+  <span class="negrita">Aspectos teóricos </span> 
+  <br>
+  <br>
+  La visualización de datos es uno de los puntos más importantes para un Data Scientist, la forma más efectiva de transmitir el conocimiento son las imágenes, las visualizaciones deben permitir que el mensaje sea claro y efectivo.
+  <br>
+  <br> 
+  Durante el trabajo he intentado presentar de manera clara los diferentes datos del proyecto para lograr su total entendimiento. Con el fin de sacar mayores conclusiones y más profundas serían necesarios datos más detallados y la ayuda de expertos en la matería, es decir, profesionales de la salud. 
+  <br>
+  <br>
+  <span class="negrita">Gráficos empleados </span>
+  <br>
+  <br>
+  Para hacer uso correcto de las siguientes aplicaciones hemos creado nuevas variables y realizado modificaciones en el dataset para agrupar los datos. Como he mencionado al comienzo, la limpieza y el análisis de datos de la base de datos estaba previamente realizado, ya que ha sido utilizado para realizar las actividades de la asignaturas de Minería de datos y Estadística avanzada.
+  <br>
+
+  <ul>
+  <li>Google SpreadSheet: programa de hoja de cálculo incluido como parte del paquete gratuito de editores de documentos de Google basado en la web que ofrece Google .</li>
+
+  <li>RStudio:  es un entorno de desarrollo integrado para el lenguaje de programación R. Proporciona una interfaz gráfica de usuario para trabajar con R, lo que facilita la programación y el análisis de datos. Ofrece herramientas para visualizar y explorar datos, como tablas de datos, resúmenes estadísticos y gráficos de distribución</li>
+
+  <li>Jupyter Notebook: herramienta popular para la visualización de datos en Python. Ofrece una gran cantidad de paquetes y herramientas para la creación de gráficos y visualizaciones de datos interactivas.</li>
+  </ul>
+  <br>
+  <br>
+  <span class="negrita">NOTA </span>
+  <br>
+  <br>
+  La base de datos fue modificada en la primera asignatura (Minería de datos) para asegurar la confidencialiadad de los datos personales de los pacientes y mantener su anonimato.
+  <br>
+  <br>
+  El dataset ha sido obtenido a traves de un proyecto en el que participaron compañeros de trabajo de la unidad de investiigación del hospital Galdacano, este hospital forma parte de la Red Sanitaria Vasca.
+</div>
